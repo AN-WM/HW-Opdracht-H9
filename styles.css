@@ -1,0 +1,38 @@
+:root {
+    --burger-color: hsl(334, 66%, 55%);
+    --burger-width: 200px;
+    --burger-height: 20px;
+}
+
+body {
+    display: flex;
+    flex-basis: 100px;
+    justify-content: center;
+}
+
+#menu {
+    width: var(--burger-width);
+    height: var(--burger-height);
+    background-color: var(--burger-color);
+    display: block;
+    position: relative;
+    margin: 100px;
+}
+
+#menu::before,
+#menu::after {
+    content: "";
+    width: var(--burger-width);
+    height: var(--burger-height);
+    background-color: var(--burger-color);
+    display: block;
+    position: absolute;
+}
+
+#menu::before {
+    top: -35px;
+}
+
+#menu::after {
+    top: 35px;
+}
